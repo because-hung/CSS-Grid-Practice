@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid practice / layout</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .grid{
+            width: 60%;
+              display: grid;
+              /* grid-template-columns: repeat(3, 1fr);
+              grid-gap: 20px; */
+              /*demo 2*/
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+              grid-template-rows: 200px minmax(100px, max-content);
+              /* grid-template-columns: minmax(300px, 1fr) 1fr 1fr;   */
+              grid-gap: 20px;
+              /*demo 1*/
+              /*column*/
+              /* grid-template-columns: 30% 30% 30%; */
+              /*fr*/
+              /* grid-template-columns: 1fr 2fr 1fr; */
+              /* grid-template-columns: repeat(3, 1fr); */
+              /*fr sample*/
+              /* grid-template-columns: 1fr 2fr 1fr 2fr;  */
+              /* grid-template-columns: repeat(2, 1fr 2fr);  */
+              /*minmax*/
+              /* grid-template-columns: minmax(300px, 1fr) 1fr 1fr; 
+              grid-column-gap: 20px;
+              border: 2px red solid;
+              justify-content: center; */
+        }
+
+    @media screen and (max-width:768px) {
+        /*demo 1*/
+        /* .grid{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, minmax(100px, max-content));
+        }
+        demo 2 */
+    }
+        .box{
+            width: 100%;
+           
+            background: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+   
+    <div class="grid container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <!--fr sample-->
+        <!--demo 2-->
+         <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae rem dignissimos hic libero voluptatibus incidunt sapiente. Saepe vero, mollitia placeat cumque alias possimus ex excepturi in repellendus odio iure necessitatibus praesentium quidem sed quibusdam modi sint earum id est nesciunt. Id temporibus officia repudiandae ratione nemo quas totam consectetur reprehenderit deleniti praesentium in iste eum quia eligendi ducimus facere dolorum voluptatum non, labore sed. Aliquam provident temporibus voluptates quaerat eligendi numquam velit nihil corrupti, inventore incidunt labore recusandae maxime sit consectetur in, voluptatem odit necessitatibus vero accusantium. Quisquam eius aliquam esse tempore, maiores repellendus nostrum impedit ut eveniet, vitae ipsum!</div>
+        <div class="box">box 5</div>
+        <div class="box">box 6</div> 
+    </div> 
+
+</body>
+</html>
